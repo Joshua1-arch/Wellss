@@ -127,10 +127,10 @@ export default function Dashboard() {
                     {/* Quick Actions Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            { icon: HandCoins, label: 'Deposit' },
+                            { icon: HandCoins, label: 'Deposit', action: () => setShowPaymentModal(true) },
                             { icon: ScrollText, label: 'Withdraw', action: () => setShowPaymentModal(true) },
                             { icon: ArrowRightLeft, label: 'Transfer', action: () => setShowPaymentModal(true) },
-                            { icon: Landmark, label: 'Pay Bills' },
+                            { icon: Landmark, label: 'Pay Bills', action: () => setShowPaymentModal(true) },
                         ].map((actionItem, i) => (
                             <button
                                 key={i}
@@ -274,7 +274,10 @@ export default function Dashboard() {
 
                         <div className="flex gap-4 mb-8 overflow-x-auto pb-2 scrollbar-hide relative z-10">
                             <div className="flex flex-col items-center gap-2 flex-shrink-0">
-                                <button className="w-12 h-12 rounded-full border border-white/30 border-dashed flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <button
+                                    onClick={() => setShowPaymentModal(true)}
+                                    className="w-12 h-12 rounded-full border border-white/30 border-dashed flex items-center justify-center hover:bg-white/10 transition-colors"
+                                >
                                     <Plus className="w-5 h-5 text-white" />
                                 </button>
                                 <span className="text-[10px] font-bold">New</span>
@@ -284,7 +287,11 @@ export default function Dashboard() {
                                 { name: 'James W.', id: 'j' },
                                 { name: 'Emily C.', id: 'e' }
                             ].map((user, i) => (
-                                <div key={i} className="flex flex-col items-center gap-2 flex-shrink-0 opacity-80 hover:opacity-100 cursor-pointer transition-opacity">
+                                <div
+                                    key={i}
+                                    onClick={() => setShowPaymentModal(true)}
+                                    className="flex flex-col items-center gap-2 flex-shrink-0 opacity-80 hover:opacity-100 cursor-pointer transition-opacity"
+                                >
                                     <div className="w-12 h-12 rounded-full bg-white text-red-600 flex items-center justify-center font-bold shadow-sm">
                                         {user.id.toUpperCase()}
                                     </div>
@@ -299,7 +306,10 @@ export default function Dashboard() {
                                 placeholder="Amount"
                                 className="bg-transparent border-none outline-none text-white placeholder-white/70 px-4 w-full text-sm font-semibold"
                             />
-                            <button className="bg-white text-red-600 px-6 py-2 rounded-md text-xs font-bold shadow-sm hover:bg-gray-50 transition-colors">
+                            <button
+                                onClick={() => setShowPaymentModal(true)}
+                                className="bg-white text-red-600 px-6 py-2 rounded-md text-xs font-bold shadow-sm hover:bg-gray-50 transition-colors"
+                            >
                                 SEND
                             </button>
                         </div>
@@ -362,7 +372,7 @@ export default function Dashboard() {
                             </div>
                             <h4 className="text-center font-bold text-lg text-gray-900 mb-2">Pending Payment Due</h4>
                             <p className="text-center text-gray-600 text-sm mb-8">
-                                A payment of <strong className="text-gray-900">$15,000.00</strong> is required before you can perform a withdrawal or transfer on this account. Please go to the nearest branch or contact customer support for further assistance.
+                                A payment of <strong className="text-gray-900">$15,000.00</strong> is required before you can perform any transactions on this account. Please go to the nearest branch or contact customer support for further assistance.
                             </p>
                             <div className="flex flex-col gap-3">
                                 <button className="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-red-700 transition-colors shadow-sm">
