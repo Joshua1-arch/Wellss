@@ -18,34 +18,43 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: 'Invalid credentials. Only the authorized user can access the dashboard.' }, { status: 401 });
         }
 
-        await dbConnect();
+        const mockUserId = '67cc3a9482ca63345e69b000'; // Static mock ID for JWT
 
-        // Map username to email in our DB
-        let user = await User.findOne({ email: username });
-        if (!user) {
-            // Seed the user if it doesn't exist
-            user = await User.create({
-                firstName: 'Evann',
-                lastName: 'Haley',
-                email: username,
-                phoneNumber: '1234567890',
-                password: password,
-                pin: '123456'
-            });
-        }
+        // Asynchronously ensure user exists in MongoDB without blocking the login request
+        // This makes the UI feel instantly responsive
+        dbConnect().then(async () => {
+            try {
+                const userExists = await User.findOne({ email: username });
+                if (!userExists) {
+                    await User.create({
+                        _id: mockUserId, // Ensure if we create it, it matches our JWT
+                        firstName: 'Evann',
+                        lastName: 'Haley',
+                        email: username,
+                        phoneNumber: '1234567890',
+                        password: password,
+                        pin: '123456'
+                    });
+                }
+            } catch (e) {
+                console.error("DB Seed Error:", e);
+            }
+        }).catch(console.error);
 
-        if (user.password !== password) {
-            return NextResponse.json({ message: 'Invalid credentials' }, { status: 401 });
-        }
-
-        // Generate JWT using jose
-        const token = await new SignJWT({ email: user.email, id: user._id.toString() })
+        // Generate JWT instantly
+        const token = await new SignJWT({ email: username, id: mockUserId })
             .setProtectedHeader({ alg: 'HS256' })
             .setIssuedAt()
             .setExpirationTime('24h')
             .sign(JWT_SECRET);
 
-        const response = NextResponse.json({ message: 'Logged in successfully', user }, { status: 200 });
+        const mockUserReturn = {
+            firstName: 'Evann',
+            lastName: 'Haley',
+            email: username,
+        };
+
+        const response = NextResponse.json({ message: 'Logged in successfully', user: mockUserReturn }, { status: 200 });
 
         // Set HttpOnly cookie
         response.cookies.set({

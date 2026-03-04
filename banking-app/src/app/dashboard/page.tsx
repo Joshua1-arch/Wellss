@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import {
     Bell, Settings, Landmark, HandCoins, ArrowRightLeft, ScrollText,
-    PiggyBank, CreditCard, Plus, ArrowUpRight, Zap, LogOut
+    PiggyBank, CreditCard, Plus, ArrowUpRight, Zap, LogOut, Loader2
 } from "lucide-react";
 import { transactions } from "@/data/transactions";
 
@@ -14,14 +14,17 @@ export default function Dashboard() {
     const [showAllTransactions, setShowAllTransactions] = useState(false);
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
+    const [isLoggingOut, setIsLoggingOut] = useState(false);
 
     const handleLogout = async () => {
+        setIsLoggingOut(true);
         try {
             await fetch("/api/auth/logout", { method: "POST" });
             router.push("/login");
             router.refresh(); // Refresh to ensure middleware drops caching of auth state
         } catch (error) {
             console.error(error);
+            setIsLoggingOut(false);
         }
     };
 
@@ -109,12 +112,13 @@ export default function Dashboard() {
                                 <div className="border-t border-gray-50 my-1"></div>
                                 <button
                                     onClick={handleLogout}
-                                    className="w-full text-left flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors"
+                                    disabled={isLoggingOut}
+                                    className="w-full text-left flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     <div className="p-1.5 rounded-md bg-red-100 text-red-600">
-                                        <LogOut className="w-4 h-4" />
+                                        {isLoggingOut ? <Loader2 className="w-4 h-4 animate-spin" /> : <LogOut className="w-4 h-4" />}
                                     </div>
-                                    Sign Out
+                                    {isLoggingOut ? "Signing Out..." : "Sign Out"}
                                 </button>
                             </div>
                         )}

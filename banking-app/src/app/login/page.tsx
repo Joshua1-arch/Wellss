@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Eye, EyeOff, Landmark, ShieldCheck, ChevronRight } from "lucide-react";
+import { Eye, EyeOff, Landmark, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
 
 export default function Login() {
     const router = useRouter();
@@ -12,6 +12,7 @@ export default function Login() {
         password: "",
     });
     const [showPassword, setShowPassword] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,6 +20,7 @@ export default function Login() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
         try {
             const res = await fetch("/api/auth/login", {
                 method: "POST",
@@ -31,9 +33,11 @@ export default function Login() {
             } else {
                 const error = await res.json();
                 alert(error.message);
+                setIsLoading(false);
             }
         } catch (error) {
             console.error(error);
+            setIsLoading(false);
         }
     };
 
@@ -89,7 +93,7 @@ export default function Login() {
                     <div className="bg-gradient-to-r from-red-600 to-red-700 px-8 py-6 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
                         <h2 className="text-2xl font-black text-white tracking-tight relative z-10 flex items-center gap-3">
-                            Sign On
+                            Sign In
                         </h2>
                     </div>
 
@@ -139,9 +143,15 @@ export default function Login() {
                         <div className="mt-10">
                             <button
                                 type="submit"
-                                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-red-600/30 transition-all transform hover:-translate-y-0.5"
+                                disabled={isLoading}
+                                className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-red-600/30 transition-all transform hover:-translate-y-0.5 disabled:opacity-75 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                             >
-                                Secure Login
+                                {isLoading ? (
+                                    <>
+                                        <Loader2 className="w-5 h-5 animate-spin" />
+                                        Authenticating...
+                                    </>
+                                ) : "Secure Login"}
                             </button>
 
                             <div className="mt-8 text-center bg-gray-50 p-4 rounded-xl border border-gray-100">
