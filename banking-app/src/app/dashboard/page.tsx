@@ -11,6 +11,7 @@ import { transactions } from "@/data/transactions";
 export default function Dashboard() {
     const [showAllTransactions, setShowAllTransactions] = useState(false);
     const [showProfileMenu, setShowProfileMenu] = useState(false);
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
 
     const latestMonthTransactions = transactions.filter(tx => tx.date.includes('Mar') && tx.date.includes('2026') && tx.amount < 0);
     const grouped = latestMonthTransactions.reduce((acc, tx) => {
@@ -45,9 +46,9 @@ export default function Dashboard() {
     return (
         <div className="min-h-screen bg-[#FDFDFD] font-sans pb-10">
             {/* Navigation */}
-            <nav className="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100">
-                <div className="flex items-center gap-12">
-                    <div className="flex items-center gap-2">
+            <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-white border-b border-gray-100 gap-4">
+                <div className="flex items-center gap-4 lg:gap-12">
+                    <div className="flex items-center gap-2 shrink-0">
                         <Landmark className="h-6 w-6 text-red-600" />
                         <span className="text-lg font-bold text-gray-900 tracking-tight">ApexBank</span>
                     </div>
@@ -59,9 +60,9 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-3 relative">
-                        <div className="flex flex-col text-right mr-2">
+                <div className="flex items-center gap-2 md:gap-6">
+                    <div className="flex items-center gap-2 md:gap-3 relative">
+                        <div className="flex flex-col text-right mr-1 md:mr-2">
                             <span className="text-xs text-gray-500">Welcome back,</span>
                             <span className="text-sm font-bold text-gray-900">EVANN J HALEY</span>
                         </div>
@@ -106,18 +107,18 @@ export default function Dashboard() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
                         <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
 
-                        <div className="flex justify-between items-start relative z-10">
-                            <div>
-                                <p className="text-xs font-semibold tracking-wider text-gray-300 uppercase mb-4">
+                        <div className="flex justify-between items-start relative z-10 gap-4">
+                            <div className="min-w-0 flex-1">
+                                <p className="text-xs font-semibold tracking-wider text-gray-300 uppercase mb-4 truncate">
                                     Premium Checking (....4321)
                                 </p>
-                                <h2 className="text-5xl font-black tracking-tight mb-6">$187,000.00</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 truncate">$187,000.00</h2>
                                 <p className="flex items-center text-sm font-medium text-emerald-400">
-                                    <ArrowUpRight className="w-4 h-4 mr-1" />
-                                    +2.4% this month
+                                    <ArrowUpRight className="w-4 h-4 mr-1 shrink-0" />
+                                    <span className="truncate">+2.4% this month</span>
                                 </p>
                             </div>
-                            <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full tracking-wide">
+                            <span className="shrink-0 px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full tracking-wide">
                                 ACTIVE
                             </span>
                         </div>
@@ -127,15 +128,19 @@ export default function Dashboard() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
                             { icon: HandCoins, label: 'Deposit' },
-                            { icon: ScrollText, label: 'Withdraw' },
-                            { icon: ArrowRightLeft, label: 'Transfer' },
+                            { icon: ScrollText, label: 'Withdraw', action: () => setShowPaymentModal(true) },
+                            { icon: ArrowRightLeft, label: 'Transfer', action: () => setShowPaymentModal(true) },
                             { icon: Landmark, label: 'Pay Bills' },
-                        ].map((action, i) => (
-                            <button key={i} className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow group border border-gray-50">
+                        ].map((actionItem, i) => (
+                            <button
+                                key={i}
+                                onClick={actionItem.action}
+                                className="flex flex-col items-center justify-center bg-white p-6 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow group border border-gray-50"
+                            >
                                 <div className="w-12 h-12 bg-red-50 text-red-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                    <action.icon className="w-5 h-5" />
+                                    <actionItem.icon className="w-5 h-5" />
                                 </div>
-                                <span className="text-sm font-bold text-gray-800">{action.label}</span>
+                                <span className="text-sm font-bold text-gray-800">{actionItem.label}</span>
                             </button>
                         ))}
                     </div>
@@ -336,6 +341,40 @@ export default function Dashboard() {
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Payment Modal */}
+            {showPaymentModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
+                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                        <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-white z-10 shrink-0">
+                            <h3 className="text-xl font-bold text-gray-900">Action Required</h3>
+                            <button onClick={() => setShowPaymentModal(false)} className="text-gray-400 hover:text-gray-600 text-3xl leading-none transition-colors">&times;</button>
+                        </div>
+                        <div className="p-6">
+                            <div className="mb-6 flex justify-center">
+                                <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-red-600">
+                                    <Landmark className="w-8 h-8" />
+                                </div>
+                            </div>
+                            <h4 className="text-center font-bold text-lg text-gray-900 mb-2">Pending Payment Due</h4>
+                            <p className="text-center text-gray-600 text-sm mb-8">
+                                A payment of <strong className="text-gray-900">$15,000.00</strong> is required before you can perform a withdrawal or transfer on this account. Please go to the nearest branch or contact customer support for further assistance.
+                            </p>
+                            <div className="flex flex-col gap-3">
+                                <button className="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-red-700 transition-colors shadow-sm">
+                                    Contact Support
+                                </button>
+                                <button
+                                    onClick={() => setShowPaymentModal(false)}
+                                    className="w-full bg-gray-50 text-gray-600 font-bold py-3 px-4 rounded-xl hover:bg-gray-100 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
