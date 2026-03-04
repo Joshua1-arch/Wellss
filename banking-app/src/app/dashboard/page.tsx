@@ -1,17 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import {
     Bell, Settings, Landmark, HandCoins, ArrowRightLeft, ScrollText,
-    PiggyBank, CreditCard, Plus, ArrowUpRight, Zap
+    PiggyBank, CreditCard, Plus, ArrowUpRight, Zap, LogOut
 } from "lucide-react";
 import { transactions } from "@/data/transactions";
 
 export default function Dashboard() {
+    const router = useRouter();
     const [showAllTransactions, setShowAllTransactions] = useState(false);
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
+
+    const handleLogout = async () => {
+        try {
+            await fetch("/api/auth/logout", { method: "POST" });
+            router.push("/login");
+            router.refresh(); // Refresh to ensure middleware drops caching of auth state
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     const latestMonthTransactions = transactions.filter(tx => tx.date.includes('Mar') && tx.date.includes('2026') && tx.amount < 0);
     const grouped = latestMonthTransactions.reduce((acc, tx) => {
@@ -44,19 +56,21 @@ export default function Dashboard() {
     const savingsBalance = 42150.00; // Static realistic savings base
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] font-sans pb-10">
+        <div className="min-h-screen bg-[#F8F9FA] font-sans pb-10">
             {/* Navigation */}
-            <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-white border-b border-gray-100 gap-4">
+            <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm sticky top-0 z-40">
                 <div className="flex items-center gap-4 lg:gap-12">
-                    <div className="flex items-center gap-2 shrink-0">
-                        <Landmark className="h-6 w-6 text-red-600" />
-                        <span className="text-lg font-bold text-gray-900 tracking-tight">ApexBank</span>
+                    <div className="flex items-center gap-2 shrink-0 cursor-pointer">
+                        <div className="bg-gradient-to-br from-red-600 to-red-700 p-2 rounded-lg shadow-sm shadow-red-600/20">
+                            <Landmark className="h-5 w-5 text-white" />
+                        </div>
+                        <span className="text-xl font-black text-gray-900 tracking-tight">Apex<span className="text-red-600">Bank</span></span>
                     </div>
-                    <div className="hidden md:flex space-x-8">
-                        <a href="#" className="text-sm font-semibold text-red-600 border-b-2 border-red-600 pb-1">Dashboard</a>
-                        <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-900 pb-1">Accounts</a>
-                        <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-900 pb-1">Transfers</a>
-                        <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-900 pb-1">Investments</a>
+                    <div className="hidden md:flex space-x-2">
+                        <a href="#" className="px-4 py-2 text-sm font-bold border-b-2 border-red-600 bg-red-50 hover:bg-red-100 rounded-t-lg transition-all" style={{ color: '#b91c1c', textDecoration: 'none' }}>Dashboard</a>
+                        <a href="#" className="px-4 py-2 text-sm font-semibold hover:bg-gray-100 rounded-lg transition-all" style={{ color: '#4b5563', textDecoration: 'none' }}>Accounts</a>
+                        <a href="#" className="px-4 py-2 text-sm font-semibold hover:bg-gray-100 rounded-lg transition-all" style={{ color: '#4b5563', textDecoration: 'none' }}>Transfers</a>
+                        <a href="#" className="px-4 py-2 text-sm font-semibold hover:bg-gray-100 rounded-lg transition-all" style={{ color: '#4b5563', textDecoration: 'none' }}>Investments</a>
                     </div>
                 </div>
 
@@ -91,6 +105,16 @@ export default function Dashboard() {
                                         <Settings className="w-4 h-4" />
                                     </div>
                                     Account Settings
+                                </button>
+                                <div className="border-t border-gray-50 my-1"></div>
+                                <button
+                                    onClick={handleLogout}
+                                    className="w-full text-left flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors"
+                                >
+                                    <div className="p-1.5 rounded-md bg-red-100 text-red-600">
+                                        <LogOut className="w-4 h-4" />
+                                    </div>
+                                    Sign Out
                                 </button>
                             </div>
                         )}
