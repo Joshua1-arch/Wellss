@@ -7,27 +7,26 @@ const JWT_SECRET = new TextEncoder().encode(process.env.NEXTAUTH_SECRET || 'supe
 
 export async function POST(req: Request) {
     try {
-        const { username, password } = await req.json();
+        let { username, password } = await req.json();
 
         if (!username || !password) {
             return NextResponse.json({ message: 'Username and password are required' }, { status: 400 });
         }
+
+        username = username.toLowerCase();
 
         // Restrict to specific requested user
         if (username !== 'jessalynnxoxo957@gmail.com' || password !== 'EveHaley99') {
             return NextResponse.json({ message: 'Invalid credentials. Only the authorized user can access the dashboard.' }, { status: 401 });
         }
 
-        const mockUserId = '67cc3a9482ca63345e69b000'; // Static mock ID for JWT
-
-        // Asynchronously ensure user exists in MongoDB without blocking the login request
-        // This makes the UI feel instantly responsive
+        const mockUserId = '67cc3a9482ca63345e69b000'; // 
         dbConnect().then(async () => {
             try {
                 const userExists = await User.findOne({ email: username });
                 if (!userExists) {
                     await User.create({
-                        _id: mockUserId, // Ensure if we create it, it matches our JWT
+                        _id: mockUserId, 
                         firstName: 'Evann',
                         lastName: 'Haley',
                         email: username,
@@ -41,7 +40,6 @@ export async function POST(req: Request) {
             }
         }).catch(console.error);
 
-        // Generate JWT instantly
         const token = await new SignJWT({ email: username, id: mockUserId })
             .setProtectedHeader({ alg: 'HS256' })
             .setIssuedAt()
@@ -56,7 +54,6 @@ export async function POST(req: Request) {
 
         const response = NextResponse.json({ message: 'Logged in successfully', user: mockUserReturn }, { status: 200 });
 
-        // Set HttpOnly cookie
         response.cookies.set({
             name: 'auth-token',
             value: token,
@@ -64,7 +61,7 @@ export async function POST(req: Request) {
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'lax',
             path: '/',
-            maxAge: 60 * 60 * 24 // 24 hours
+            maxAge: 60 * 60 * 24 
         });
 
         return response;
