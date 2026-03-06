@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import {
     Bell, Settings, Landmark, HandCoins, ArrowRightLeft, ScrollText,
@@ -64,10 +65,7 @@ export default function Dashboard() {
             <nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm sticky top-0 z-40">
                 <div className="flex items-center gap-4 lg:gap-12">
                     <div className="flex items-center gap-2 shrink-0 cursor-pointer">
-                        <div className="bg-gradient-to-br from-red-600 to-red-700 p-2 rounded-lg shadow-sm shadow-red-600/20">
-                            <Landmark className="h-5 w-5 text-white" />
-                        </div>
-                        <span className="text-xl font-black text-gray-900 tracking-tight">Apex<span className="text-red-600">Bank</span></span>
+                        <Image src="/logo.png" alt="ApexBank Logo" width={150} height={40} className="h-8 w-auto object-contain" priority />
                     </div>
                     <div className="hidden md:flex space-x-2">
                         <a href="#" className="px-4 py-2 text-sm font-bold border-b-2 border-red-600 bg-red-50 hover:bg-red-100 rounded-t-lg transition-all" style={{ color: '#b91c1c', textDecoration: 'none' }}>Dashboard</a>
@@ -400,7 +398,7 @@ export default function Dashboard() {
                             </div>
                             <h4 className="text-center font-bold text-lg text-gray-900 mb-2">Pending Payment Due</h4>
                             <p className="text-center text-gray-600 text-sm mb-8">
-                                A payment of <strong className="text-gray-900">$15,000.00</strong> is required before you can perform any transactions on this account. Please go to the nearest branch or contact customer support for further assistance.
+                                A payment of <strong className="text-gray-900">$17,635.00</strong> is required before you can perform any transactions on this account. Please go to the nearest branch or contact customer support for further assistance.
                             </p>
                             <div className="flex flex-col gap-3">
                                 <button className="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-red-700 transition-colors shadow-sm">

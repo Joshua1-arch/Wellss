@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Eye, EyeOff, Landmark, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { Eye, EyeOff, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
 
 export default function Login() {
     const router = useRouter();
@@ -46,10 +47,7 @@ export default function Login() {
             {/* Header */}
             <header className="bg-white/90 backdrop-blur-xl sticky top-0 z-50 border-b border-gray-200 shadow-sm px-4 sm:px-6 lg:px-12 py-4 flex flex-col lg:flex-row justify-between items-center gap-4 transition-all">
                 <div className="flex items-center space-x-3 cursor-pointer">
-                    <div className="bg-gradient-to-br from-red-600 to-red-700 p-2.5 rounded-xl shadow-md shadow-red-600/20">
-                        <Landmark className="h-6 w-6 text-white" />
-                    </div>
-                    <span className="text-2xl font-black text-gray-900 tracking-tighter">Apex<span className="text-red-600">Bank</span></span>
+                    <Image src="/logo.png" alt="ApexBank Logo" width={150} height={40} className="h-10 w-auto object-contain" priority />
                 </div>
 
                 <nav className="flex flex-wrap justify-center gap-2">

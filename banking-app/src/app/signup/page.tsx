@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Landmark } from "lucide-react";
+import Image from "next/image";
 
 export default function SignUp() {
     const router = useRouter();
@@ -51,8 +51,7 @@ export default function SignUp() {
         <div className="flex min-h-screen items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-10">
                 <div className="flex items-center gap-2 mb-8 justify-center">
-                    <Landmark className="h-8 w-8 text-red-600" />
-                    <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Modern Bank</h1>
+                    <Image src="/logo.png" alt="Modern Bank Logo" width={180} height={50} className="h-12 w-auto object-contain" priority />
                 </div>
                 <div className="text-center mb-10">
                     <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Create your account</h2>
