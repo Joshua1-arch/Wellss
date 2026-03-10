@@ -16,6 +16,7 @@ export default function Dashboard() {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
     const [isLoggingOut, setIsLoggingOut] = useState(false);
+    const [showCardDetails, setShowCardDetails] = useState(false);
 
     const handleLogout = async () => {
         setIsLoggingOut(true);
@@ -150,7 +151,117 @@ export default function Dashboard() {
                         </div>
                     </div>
 
+                    {/* My Cards */}
+                    <div>
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-lg font-bold text-gray-900">My Cards</h3>
+                            <span className="text-xs font-semibold px-2 py-1 rounded-full bg-red-50 text-red-600">
+                                Mastercard Platinum
+                            </span>
+                        </div>
+
+                        {/* Responsive Card */}
+                        <div
+                            style={{
+                                width: '100%',
+                                maxWidth: '480px',
+                                background: 'linear-gradient(135deg, #1a1b26 0%, #2d1b4e 50%, #7c1d2e 100%)',
+                                borderRadius: '18px',
+                                padding: 'clamp(18px, 4vw, 28px)',
+                                boxShadow: '0 20px 60px rgba(0,0,0,0.30), 0 4px 16px rgba(180,30,60,0.15)',
+                                position: 'relative',
+                                overflow: 'hidden',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: 'clamp(14px, 3vw, 22px)',
+                            }}
+                        >
+                            {/* Decorative glows */}
+                            <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '180px', height: '180px', borderRadius: '50%', background: 'rgba(255,255,255,0.04)', pointerEvents: 'none' }} />
+                            <div style={{ position: 'absolute', bottom: '-40px', left: '40px', width: '140px', height: '140px', borderRadius: '50%', background: 'rgba(255,255,255,0.03)', pointerEvents: 'none' }} />
+
+                            {/* Row 1: Bank + Chip */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
+                                <div>
+                                    <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 'clamp(9px,1.8vw,11px)', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', display: 'block' }}>ApexBank</span>
+                                    <span style={{ color: 'white', fontSize: 'clamp(10px,2vw,13px)', fontWeight: 800, letterSpacing: '0.06em' }}>PLATINUM</span>
+                                </div>
+                                {/* EMV Chip */}
+                                <div style={{ width: 'clamp(34px,7vw,44px)', height: 'clamp(26px,5vw,34px)', borderRadius: '5px', background: 'linear-gradient(135deg,#d4a936,#f5d660 40%,#c9960a)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 4px rgba(0,0,0,0.4)', flexShrink: 0 }}>
+                                    <div style={{ width: '70%', height: '70%', borderRadius: '3px', border: '1px solid rgba(0,0,0,0.2)', display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: '1px', padding: '2px' }}>
+                                        {[0, 1, 2, 3].map(n => <div key={n} style={{ background: 'rgba(0,0,0,0.15)', borderRadius: '1px' }} />)}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Row 2: Card Number */}
+                            <div style={{ position: 'relative', zIndex: 1 }}>
+                                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '4px' }}>Card Number</p>
+                                <p style={{ color: 'white', fontSize: 'clamp(13px,3.5vw,19px)', fontWeight: 700, letterSpacing: '0.2em', fontFamily: 'monospace', textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>
+                                    {showCardDetails ? '5337  5410  0101  6068' : '••••  ••••  ••••  ••••'}
+                                </p>
+                            </div>
+
+                            {/* Row 3: Expiry + CVV + Card ID */}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(10px,2.5vw,20px)', position: 'relative', zIndex: 1 }}>
+                                <div>
+                                    <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>Expires</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, fontFamily: 'monospace' }}>
+                                        {showCardDetails ? '03/33' : '••/••'}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>CVV</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, fontFamily: 'monospace' }}>
+                                        {showCardDetails ? '373' : '•••'}
+                                    </p>
+                                </div>
+                                <div>
+                                    <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>Card ID</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, fontFamily: 'monospace', letterSpacing: '0.08em' }}>
+                                        {showCardDetails ? 'e351bc2c' : '••••••••'}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Row 4: Cardholder + Mastercard + Toggle button */}
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', position: 'relative', zIndex: 1, flexWrap: 'wrap', gap: '10px' }}>
+                                <div>
+                                    <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>Card Holder</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, letterSpacing: '0.05em' }}>EVANN J HALEY</p>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <button
+                                        onClick={() => setShowCardDetails(v => !v)}
+                                        style={{
+                                            background: showCardDetails ? 'rgba(255,255,255,0.18)' : 'rgba(255,255,255,0.12)',
+                                            border: '1px solid rgba(255,255,255,0.25)',
+                                            color: 'white',
+                                            borderRadius: '8px',
+                                            padding: 'clamp(4px,1vw,6px) clamp(10px,2vw,14px)',
+                                            fontSize: 'clamp(9px,1.8vw,11px)',
+                                            fontWeight: 700,
+                                            letterSpacing: '0.06em',
+                                            cursor: 'pointer',
+                                            backdropFilter: 'blur(6px)',
+                                            transition: 'background 0.2s',
+                                            whiteSpace: 'nowrap',
+                                        }}
+                                    >
+                                        {showCardDetails ? '🔒 Hide Details' : '👁 See Details'}
+                                    </button>
+                                    {/* Mastercard rings */}
+                                    <div style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+                                        <div style={{ width: 'clamp(20px,4.5vw,28px)', height: 'clamp(20px,4.5vw,28px)', borderRadius: '50%', background: '#EB001B', opacity: 0.92 }} />
+                                        <div style={{ width: 'clamp(20px,4.5vw,28px)', height: 'clamp(20px,4.5vw,28px)', borderRadius: '50%', background: '#F79E1B', opacity: 0.92, marginLeft: 'clamp(-8px,-2vw,-6px)' }} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Quick Actions Grid */}
+
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
                             { icon: HandCoins, label: 'Deposit', action: () => setShowPaymentModal(true) },
