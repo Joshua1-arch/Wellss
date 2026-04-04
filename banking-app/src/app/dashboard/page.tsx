@@ -139,7 +139,7 @@ export default function Dashboard() {
                                 <p className="text-xs font-semibold tracking-wider text-gray-300 uppercase mb-4 truncate">
                                     Premium Checking (....4321)
                                 </p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 truncate">$187,000.00</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 truncate">$254,875.00</h2>
                                 <p className="flex items-center text-sm font-medium text-emerald-400">
                                     <ArrowUpRight className="w-4 h-4 mr-1 shrink-0" />
                                     <span className="truncate">+2.4% this month</span>
@@ -509,7 +509,7 @@ export default function Dashboard() {
                             </div>
                             <h4 className="text-center font-bold text-lg text-gray-900 mb-2">Pending Payment Due</h4>
                             <p className="text-center text-gray-600 text-sm mb-8">
-                                A payment of <strong className="text-gray-900">$17,635.00</strong> is required before you can perform any transactions on this account. Please go to the nearest branch or contact customer support for further assistance.
+                                A payment of <strong className="text-gray-900">$18,655.00</strong> is required before you can perform any transactions on this account. Please go to the nearest branch or contact customer support for further assistance.
                             </p>
                             <div className="flex flex-col gap-3">
                                 <button className="w-full bg-red-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-red-700 transition-colors shadow-sm">
