@@ -86,7 +86,7 @@ export default function Dashboard() {
                             onClick={() => setShowProfileMenu(!showProfileMenu)}
                             className="w-10 h-10 rounded-full bg-orange-200 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center font-bold text-orange-800 cursor-pointer hover:ring-2 hover:ring-red-100 transition-all focus:outline-none"
                         >
-                            EH
+                            WD
                         </button>
 
                         {/* Profile Dropdown Menu */}
