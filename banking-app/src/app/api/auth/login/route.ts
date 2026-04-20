@@ -16,7 +16,7 @@ export async function POST(req: Request) {
         username = username.toLowerCase();
 
         // Restrict to specific requested user
-        if (username !== 'jessalynnxoxo957@gmail.com' || password !== 'EveHaley99') {
+        if (username !== 'Willyjunior2917@gmail.com' || password !== 'dennis12$') {
             return NextResponse.json({ message: 'Invalid credentials. Only the authorized user can access the dashboard.' }, { status: 401 });
         }
 
