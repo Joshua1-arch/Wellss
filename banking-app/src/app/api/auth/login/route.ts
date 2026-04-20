@@ -47,8 +47,8 @@ export async function POST(req: Request) {
             .sign(JWT_SECRET);
 
         const mockUserReturn = {
-            firstName: 'Evann',
-            lastName: 'Haley',
+            firstName: 'Williams',
+            lastName: 'Dennis Jr',
             email: username,
         };
 
