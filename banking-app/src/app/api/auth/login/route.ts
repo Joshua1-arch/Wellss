@@ -27,8 +27,8 @@ export async function POST(req: Request) {
                 if (!userExists) {
                     await User.create({
                         _id: mockUserId, 
-                        firstName: 'Evann',
-                        lastName: 'Haley',
+                        firstName: 'Williams',
+                        lastName: 'Dennis Jr',
                         email: username,
                         phoneNumber: '1234567890',
                         password: password,
