@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { toast } from "react-hot-toast";
 
 export default function SignUp() {
     const router = useRouter();
@@ -25,7 +26,7 @@ export default function SignUp() {
         e.preventDefault();
 
         if (formData.password !== formData.confirmPassword) {
-            alert("Passwords do not match");
+            toast.error("Passwords do not match");
             return;
         }
 
@@ -40,7 +41,7 @@ export default function SignUp() {
                 router.push("/dashboard");
             } else {
                 const error = await res.json();
-                alert(error.message);
+                toast.error(error.message || "Sign up failed");
             }
         } catch (error) {
             console.error(error);

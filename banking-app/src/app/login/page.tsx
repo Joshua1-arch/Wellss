@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Eye, EyeOff, ShieldCheck, ChevronRight, Loader2 } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 export default function Login() {
     const router = useRouter();
@@ -33,7 +34,7 @@ export default function Login() {
                 router.push("/dashboard");
             } else {
                 const error = await res.json();
-                alert(error.message);
+                toast.error(error.message || "Login failed");
                 setIsLoading(false);
             }
         } catch (error) {
