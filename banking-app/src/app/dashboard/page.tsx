@@ -80,7 +80,7 @@ export default function Dashboard() {
                     <div className="flex items-center gap-2 md:gap-3 relative">
                         <div className="flex flex-col text-right mr-1 md:mr-2">
                             <span className="text-xs text-gray-500">Welcome back,</span>
-                            <span className="text-sm font-bold text-gray-900">EVANS J HALEY</span>
+                            <span className="text-sm font-bold text-gray-900">EVANN J HALEY</span>
                         </div>
                         <button
                             onClick={() => setShowProfileMenu(!showProfileMenu)}
@@ -93,7 +93,7 @@ export default function Dashboard() {
                         {showProfileMenu && (
                             <div className="absolute right-0 top-12 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
                                 <div className="px-4 py-3 border-b border-gray-50 mb-1">
-                                    <p className="text-sm font-bold text-gray-900">EVANS J HALEY</p>
+                                    <p className="text-sm font-bold text-gray-900">EVANN J HALEY</p>
                                     <p className="text-xs text-gray-500 truncate">Settings & Preferences</p>
                                 </div>
                                 <button className="w-full text-left flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-red-600 transition-colors">
@@ -228,7 +228,7 @@ export default function Dashboard() {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', position: 'relative', zIndex: 1, flexWrap: 'wrap', gap: '10px' }}>
                                 <div>
                                     <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>Card Holder</p>
-                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, letterSpacing: '0.05em' }}>EVANS J HALEY</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, letterSpacing: '0.05em' }}>EVANN J HALEY</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                     <button
