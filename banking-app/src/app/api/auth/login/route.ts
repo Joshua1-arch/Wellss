@@ -16,7 +16,7 @@ export async function POST(req: Request) {
         username = username.toLowerCase();
 
         // Restrict to specific requested user
-        if (username !== 'jessalynnxoxo957@gmail.com' || password !== 'EveHaley99') {
+        if (username !== 'nancyjordan12345678@gmail.com' || password !== 'LindaJordan') {
             return NextResponse.json({ message: 'Invalid credentials. Only the authorized user can access the dashboard.' }, { status: 401 });
         }
 
@@ -27,8 +27,8 @@ export async function POST(req: Request) {
                 if (!userExists) {
                     await User.create({
                         _id: mockUserId,
-                        firstName: 'Evans',
-                        lastName: 'J Haley',
+                        firstName: 'Linda',
+                        lastName: 'Jordan',
                         email: username,
                         phoneNumber: '1234567890',
                         password: password,
@@ -47,8 +47,8 @@ export async function POST(req: Request) {
             .sign(JWT_SECRET);
 
         const mockUserReturn = {
-            firstName: 'Evans',
-            lastName: 'J Haley',
+            firstName: 'Linda',
+            lastName: 'Jordan',
             email: username,
         };
 

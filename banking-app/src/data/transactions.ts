@@ -1,5 +1,1679 @@
 export const transactions = [
   {
+    "date": "Mon, Oct 05, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.52
+  },
+  {
+    "date": "Mon, Oct 05, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -102.14
+  },
+  {
+    "date": "Sun, Oct 04, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.54
+  },
+  {
+    "date": "Sun, Oct 04, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -35.6
+  },
+  {
+    "date": "Sat, Oct 03, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Oct 03, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.04
+  },
+  {
+    "date": "Sat, Oct 03, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -37.35
+  },
+  {
+    "date": "Fri, Oct 02, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -32.75
+  },
+  {
+    "date": "Fri, Oct 02, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -167.02
+  },
+  {
+    "date": "Thu, Oct 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Thu, Oct 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Wed, Sep 30, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.71
+  },
+  {
+    "date": "Wed, Sep 30, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -28.41
+  },
+  {
+    "date": "Wed, Sep 30, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -32.51
+  },
+  {
+    "date": "Tue, Sep 29, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.22
+  },
+  {
+    "date": "Mon, Sep 28, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.7
+  },
+  {
+    "date": "Mon, Sep 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Sun, Sep 27, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -27.16
+  },
+  {
+    "date": "Sun, Sep 27, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -50.07
+  },
+  {
+    "date": "Sat, Sep 26, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Sep 26, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.12
+  },
+  {
+    "date": "Sat, Sep 26, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -25.02
+  },
+  {
+    "date": "Sat, Sep 26, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -64.17
+  },
+  {
+    "date": "Fri, Sep 25, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -123.67
+  },
+  {
+    "date": "Thu, Sep 24, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.68
+  },
+  {
+    "date": "Thu, Sep 24, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -40.04
+  },
+  {
+    "date": "Sun, Sep 20, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.99
+  },
+  {
+    "date": "Sat, Sep 19, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Sep 19, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.96
+  },
+  {
+    "date": "Sat, Sep 19, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -70.37
+  },
+  {
+    "date": "Fri, Sep 18, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -25.08
+  },
+  {
+    "date": "Thu, Sep 17, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.19
+  },
+  {
+    "date": "Thu, Sep 17, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -27.93
+  },
+  {
+    "date": "Wed, Sep 16, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.64
+  },
+  {
+    "date": "Wed, Sep 16, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -80.35
+  },
+  {
+    "date": "Tue, Sep 15, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -46.24
+  },
+  {
+    "date": "Tue, Sep 15, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Mon, Sep 14, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -32.83
+  },
+  {
+    "date": "Mon, Sep 14, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -43.88
+  },
+  {
+    "date": "Mon, Sep 14, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -107.31
+  },
+  {
+    "date": "Sun, Sep 13, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.88
+  },
+  {
+    "date": "Sun, Sep 13, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -22.15
+  },
+  {
+    "date": "Sat, Sep 12, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Fri, Sep 11, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.83
+  },
+  {
+    "date": "Fri, Sep 11, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -49.7
+  },
+  {
+    "date": "Fri, Sep 11, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -121.26
+  },
+  {
+    "date": "Fri, Sep 11, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -124.83
+  },
+  {
+    "date": "Thu, Sep 10, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.02
+  },
+  {
+    "date": "Wed, Sep 09, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.32
+  },
+  {
+    "date": "Tue, Sep 08, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -129.14
+  },
+  {
+    "date": "Tue, Sep 08, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -163.04
+  },
+  {
+    "date": "Mon, Sep 07, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.08
+  },
+  {
+    "date": "Mon, Sep 07, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -32.47
+  },
+  {
+    "date": "Mon, Sep 07, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -113.09
+  },
+  {
+    "date": "Sun, Sep 06, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.31
+  },
+  {
+    "date": "Sat, Sep 05, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Sep 05, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.31
+  },
+  {
+    "date": "Sat, Sep 05, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -23.09
+  },
+  {
+    "date": "Sat, Sep 05, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -51.9
+  },
+  {
+    "date": "Sat, Sep 05, 2026",
+    "description": "Stripe Payout - App Sale",
+    "type": "Income",
+    "amount": 69991
+  },
+  {
+    "date": "Fri, Sep 04, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.5
+  },
+  {
+    "date": "Thu, Sep 03, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.77
+  },
+  {
+    "date": "Thu, Sep 03, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -33.73
+  },
+  {
+    "date": "Wed, Sep 02, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.8
+  },
+  {
+    "date": "Wed, Sep 02, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -31.76
+  },
+  {
+    "date": "Tue, Sep 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Tue, Sep 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Tue, Sep 01, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -97.38
+  },
+  {
+    "date": "Sun, Aug 30, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.48
+  },
+  {
+    "date": "Sat, Aug 29, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Aug 29, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -24.83
+  },
+  {
+    "date": "Sat, Aug 29, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -46.82
+  },
+  {
+    "date": "Sat, Aug 29, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -155.28
+  },
+  {
+    "date": "Fri, Aug 28, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.1
+  },
+  {
+    "date": "Fri, Aug 28, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -37.67
+  },
+  {
+    "date": "Fri, Aug 28, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -133.81
+  },
+  {
+    "date": "Fri, Aug 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Wed, Aug 26, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -47.26
+  },
+  {
+    "date": "Mon, Aug 24, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -44.77
+  },
+  {
+    "date": "Mon, Aug 24, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -95.18
+  },
+  {
+    "date": "Sun, Aug 23, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.63
+  },
+  {
+    "date": "Sat, Aug 22, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Aug 22, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.67
+  },
+  {
+    "date": "Sat, Aug 22, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -29.48
+  },
+  {
+    "date": "Fri, Aug 21, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.57
+  },
+  {
+    "date": "Fri, Aug 21, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -72.23
+  },
+  {
+    "date": "Wed, Aug 19, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.81
+  },
+  {
+    "date": "Wed, Aug 19, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -97.24
+  },
+  {
+    "date": "Tue, Aug 18, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.41
+  },
+  {
+    "date": "Tue, Aug 18, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -100.91
+  },
+  {
+    "date": "Mon, Aug 17, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.65
+  },
+  {
+    "date": "Mon, Aug 17, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -34.06
+  },
+  {
+    "date": "Sun, Aug 16, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.51
+  },
+  {
+    "date": "Sun, Aug 16, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -127.18
+  },
+  {
+    "date": "Sat, Aug 15, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Aug 15, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.47
+  },
+  {
+    "date": "Sat, Aug 15, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -74.31
+  },
+  {
+    "date": "Sat, Aug 15, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Fri, Aug 14, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.6
+  },
+  {
+    "date": "Fri, Aug 14, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -38.41
+  },
+  {
+    "date": "Thu, Aug 13, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.07
+  },
+  {
+    "date": "Thu, Aug 13, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -107.22
+  },
+  {
+    "date": "Wed, Aug 12, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.69
+  },
+  {
+    "date": "Wed, Aug 12, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -84.56
+  },
+  {
+    "date": "Mon, Aug 10, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.57
+  },
+  {
+    "date": "Mon, Aug 10, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -47.51
+  },
+  {
+    "date": "Sun, Aug 09, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.79
+  },
+  {
+    "date": "Sat, Aug 08, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Aug 08, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5
+  },
+  {
+    "date": "Sat, Aug 08, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -21.06
+  },
+  {
+    "date": "Fri, Aug 07, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -69.16
+  },
+  {
+    "date": "Fri, Aug 07, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -83.97
+  },
+  {
+    "date": "Wed, Aug 05, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -47.91
+  },
+  {
+    "date": "Wed, Aug 05, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -81.98
+  },
+  {
+    "date": "Tue, Aug 04, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.78
+  },
+  {
+    "date": "Tue, Aug 04, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -120.95
+  },
+  {
+    "date": "Mon, Aug 03, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -21.06
+  },
+  {
+    "date": "Sun, Aug 02, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.55
+  },
+  {
+    "date": "Sun, Aug 02, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -21.89
+  },
+  {
+    "date": "Sat, Aug 01, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Aug 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Sat, Aug 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Sat, Aug 01, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.99
+  },
+  {
+    "date": "Fri, Jul 31, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.09
+  },
+  {
+    "date": "Fri, Jul 31, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -151.24
+  },
+  {
+    "date": "Thu, Jul 30, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -42.1
+  },
+  {
+    "date": "Thu, Jul 30, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -160.73
+  },
+  {
+    "date": "Wed, Jul 29, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -64.1
+  },
+  {
+    "date": "Tue, Jul 28, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.42
+  },
+  {
+    "date": "Tue, Jul 28, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -92.62
+  },
+  {
+    "date": "Tue, Jul 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Mon, Jul 27, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.69
+  },
+  {
+    "date": "Mon, Jul 27, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -36.28
+  },
+  {
+    "date": "Mon, Jul 27, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -166.83
+  },
+  {
+    "date": "Sun, Jul 26, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.19
+  },
+  {
+    "date": "Sat, Jul 25, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jul 25, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.88
+  },
+  {
+    "date": "Fri, Jul 24, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -165.71
+  },
+  {
+    "date": "Wed, Jul 22, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.88
+  },
+  {
+    "date": "Tue, Jul 21, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -59.22
+  },
+  {
+    "date": "Mon, Jul 20, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -46.51
+  },
+  {
+    "date": "Sun, Jul 19, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.38
+  },
+  {
+    "date": "Sun, Jul 19, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -49.84
+  },
+  {
+    "date": "Sat, Jul 18, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jul 18, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -22.28
+  },
+  {
+    "date": "Fri, Jul 17, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.57
+  },
+  {
+    "date": "Fri, Jul 17, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -55.4
+  },
+  {
+    "date": "Fri, Jul 17, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -152.26
+  },
+  {
+    "date": "Wed, Jul 15, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Mon, Jul 13, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.46
+  },
+  {
+    "date": "Sun, Jul 12, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -75.05
+  },
+  {
+    "date": "Sun, Jul 12, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -113.09
+  },
+  {
+    "date": "Sat, Jul 11, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Fri, Jul 10, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.35
+  },
+  {
+    "date": "Fri, Jul 10, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -28.6
+  },
+  {
+    "date": "Wed, Jul 08, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -57.21
+  },
+  {
+    "date": "Tue, Jul 07, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -21.61
+  },
+  {
+    "date": "Mon, Jul 06, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.18
+  },
+  {
+    "date": "Sat, Jul 04, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jul 04, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -89.59
+  },
+  {
+    "date": "Wed, Jul 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Wed, Jul 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Wed, Jul 01, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.53
+  },
+  {
+    "date": "Wed, Jul 01, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -47.73
+  },
+  {
+    "date": "Wed, Jul 01, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -163.14
+  },
+  {
+    "date": "Mon, Jun 29, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.79
+  },
+  {
+    "date": "Sun, Jun 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Sat, Jun 27, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jun 27, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.4
+  },
+  {
+    "date": "Sat, Jun 27, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -28.07
+  },
+  {
+    "date": "Fri, Jun 26, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.95
+  },
+  {
+    "date": "Fri, Jun 26, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -37.94
+  },
+  {
+    "date": "Thu, Jun 25, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.43
+  },
+  {
+    "date": "Thu, Jun 25, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -40.17
+  },
+  {
+    "date": "Thu, Jun 25, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -93.97
+  },
+  {
+    "date": "Tue, Jun 23, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.66
+  },
+  {
+    "date": "Tue, Jun 23, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -34.62
+  },
+  {
+    "date": "Tue, Jun 23, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -134.8
+  },
+  {
+    "date": "Sun, Jun 21, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.04
+  },
+  {
+    "date": "Sun, Jun 21, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -23.12
+  },
+  {
+    "date": "Sun, Jun 21, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -126.76
+  },
+  {
+    "date": "Sat, Jun 20, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jun 20, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.56
+  },
+  {
+    "date": "Thu, Jun 18, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.2
+  },
+  {
+    "date": "Thu, Jun 18, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -32.97
+  },
+  {
+    "date": "Thu, Jun 18, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -108.97
+  },
+  {
+    "date": "Wed, Jun 17, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.79
+  },
+  {
+    "date": "Tue, Jun 16, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.26
+  },
+  {
+    "date": "Tue, Jun 16, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -37.01
+  },
+  {
+    "date": "Mon, Jun 15, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.06
+  },
+  {
+    "date": "Mon, Jun 15, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Sun, Jun 14, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.23
+  },
+  {
+    "date": "Sun, Jun 14, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -21.68
+  },
+  {
+    "date": "Sun, Jun 14, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -43.21
+  },
+  {
+    "date": "Sat, Jun 13, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Fri, Jun 12, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.02
+  },
+  {
+    "date": "Fri, Jun 12, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -36.82
+  },
+  {
+    "date": "Fri, Jun 12, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -42.03
+  },
+  {
+    "date": "Thu, Jun 11, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -86.9
+  },
+  {
+    "date": "Thu, Jun 11, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -92.36
+  },
+  {
+    "date": "Wed, Jun 10, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.29
+  },
+  {
+    "date": "Wed, Jun 10, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -44.72
+  },
+  {
+    "date": "Tue, Jun 09, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.29
+  },
+  {
+    "date": "Mon, Jun 08, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -38.44
+  },
+  {
+    "date": "Sun, Jun 07, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -24.11
+  },
+  {
+    "date": "Sun, Jun 07, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -101.54
+  },
+  {
+    "date": "Sat, Jun 06, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Jun 06, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.35
+  },
+  {
+    "date": "Sat, Jun 06, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -118.1
+  },
+  {
+    "date": "Fri, Jun 05, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -115.09
+  },
+  {
+    "date": "Thu, Jun 04, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -65.75
+  },
+  {
+    "date": "Thu, Jun 04, 2026",
+    "description": "Stripe Payout - App Sale",
+    "type": "Income",
+    "amount": 69993.08
+  },
+  {
+    "date": "Tue, Jun 02, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.76
+  },
+  {
+    "date": "Tue, Jun 02, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -49.06
+  },
+  {
+    "date": "Mon, Jun 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Mon, Jun 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Mon, Jun 01, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -33.14
+  },
+  {
+    "date": "Sat, May 30, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Fri, May 29, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.88
+  },
+  {
+    "date": "Thu, May 28, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -113.86
+  },
+  {
+    "date": "Thu, May 28, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -104.38
+  },
+  {
+    "date": "Thu, May 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Wed, May 27, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.02
+  },
+  {
+    "date": "Wed, May 27, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -161.61
+  },
+  {
+    "date": "Tue, May 26, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -46.68
+  },
+  {
+    "date": "Sun, May 24, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.09
+  },
+  {
+    "date": "Sun, May 24, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -31.37
+  },
+  {
+    "date": "Sun, May 24, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -133.61
+  },
+  {
+    "date": "Sat, May 23, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Fri, May 22, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.83
+  },
+  {
+    "date": "Fri, May 22, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -40.42
+  },
+  {
+    "date": "Thu, May 21, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.45
+  },
+  {
+    "date": "Thu, May 21, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -124.32
+  },
+  {
+    "date": "Mon, May 18, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -74.92
+  },
+  {
+    "date": "Sun, May 17, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -102.25
+  },
+  {
+    "date": "Sun, May 17, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -127.12
+  },
+  {
+    "date": "Sat, May 16, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, May 16, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.6
+  },
+  {
+    "date": "Sat, May 16, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -48.21
+  },
+  {
+    "date": "Fri, May 15, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Thu, May 14, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.59
+  },
+  {
+    "date": "Thu, May 14, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -153.28
+  },
+  {
+    "date": "Mon, May 11, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -114.47
+  },
+  {
+    "date": "Sun, May 10, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.84
+  },
+  {
+    "date": "Sat, May 09, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, May 09, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -7.81
+  },
+  {
+    "date": "Sat, May 09, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -127.63
+  },
+  {
+    "date": "Fri, May 08, 2026",
+    "description": "Stripe Payout - App Sale",
+    "type": "Income",
+    "amount": 69991
+  },
+  {
+    "date": "Thu, May 07, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -47.59
+  },
+  {
+    "date": "Wed, May 06, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.57
+  },
+  {
+    "date": "Wed, May 06, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -119.55
+  },
+  {
+    "date": "Wed, May 06, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -148.62
+  },
+  {
+    "date": "Tue, May 05, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.66
+  },
+  {
+    "date": "Mon, May 04, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -46.74
+  },
+  {
+    "date": "Mon, May 04, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -92.82
+  },
+  {
+    "date": "Sun, May 03, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -22.02
+  },
+  {
+    "date": "Sun, May 03, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -66.39
+  },
+  {
+    "date": "Sat, May 02, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, May 02, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -87.02
+  },
+  {
+    "date": "Fri, May 01, 2026",
+    "description": "Avalon Apartments Rent",
+    "type": "Housing",
+    "amount": -2800
+  },
+  {
+    "date": "Fri, May 01, 2026",
+    "description": "Comcast Internet",
+    "type": "Housing",
+    "amount": -85
+  },
+  {
+    "date": "Tue, Apr 28, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -6.91
+  },
+  {
+    "date": "Tue, Apr 28, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -26.07
+  },
+  {
+    "date": "Tue, Apr 28, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -62.95
+  },
+  {
+    "date": "Tue, Apr 28, 2026",
+    "description": "Direct Deposit - Employer",
+    "type": "Income",
+    "amount": 8500
+  },
+  {
+    "date": "Mon, Apr 27, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.5
+  },
+  {
+    "date": "Sun, Apr 26, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.36
+  },
+  {
+    "date": "Sat, Apr 25, 2026",
+    "description": "Weekly Installment",
+    "type": "Transfer",
+    "amount": -500
+  },
+  {
+    "date": "Sat, Apr 25, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -8.08
+  },
+  {
+    "date": "Sat, Apr 25, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -138.68
+  },
+  {
+    "date": "Thu, Apr 23, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.92
+  },
+  {
+    "date": "Thu, Apr 23, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -39
+  },
+  {
+    "date": "Wed, Apr 22, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -5.47
+  },
+  {
+    "date": "Wed, Apr 22, 2026",
+    "description": "Whole Foods Market",
+    "type": "Groceries",
+    "amount": -138.78
+  },
+  {
+    "date": "Tue, Apr 21, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.44
+  },
+  {
+    "date": "Mon, Apr 20, 2026",
+    "description": "Starbucks Coffee",
+    "type": "Food & Drink",
+    "amount": -9.38
+  },
+  {
+    "date": "Mon, Apr 20, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -27.14
+  },
+  {
+    "date": "Sun, Apr 19, 2026",
+    "description": "Uber Rides",
+    "type": "Transfer",
+    "amount": -46.87
+  },
+  {
+    "date": "Sun, Apr 19, 2026",
+    "description": "Amazon.com",
+    "type": "Shopping",
+    "amount": -123.5
+  },
+  {
     "date": "Sat, Apr 18, 2026",
     "description": "Weekly Installment",
     "type": "Transfer",

@@ -49,6 +49,8 @@ export default function Dashboard() {
 
     const totalSpend = data.reduce((sum, item) => sum + item.value, 0);
 
+    const totalBalance = transactions.reduce((acc, tx) => acc + tx.amount, 0);
+
     // Calculate realistic Visa Platinum balance by aggregating recent standard card expenses (Food, Shopping, Services) across Feb and March 2026
     const ccBalance = transactions.reduce((acc, tx) => {
         const isRecent = tx.date.includes('2026'); // All 2026 (Jan/Feb/Mar) can be considered current revolving balance for this simulation
@@ -80,20 +82,20 @@ export default function Dashboard() {
                     <div className="flex items-center gap-2 md:gap-3 relative">
                         <div className="flex flex-col text-right mr-1 md:mr-2">
                             <span className="text-xs text-gray-500">Welcome back,</span>
-                            <span className="text-sm font-bold text-gray-900">EVANN J HALEY</span>
+                            <span className="text-sm font-bold text-gray-900">LINDA JORDAN</span>
                         </div>
                         <button
                             onClick={() => setShowProfileMenu(!showProfileMenu)}
                             className="w-10 h-10 rounded-full bg-orange-200 border-2 border-white shadow-sm overflow-hidden flex items-center justify-center font-bold text-orange-800 cursor-pointer hover:ring-2 hover:ring-red-100 transition-all focus:outline-none"
                         >
-                            EH
+                            LJ
                         </button>
 
                         {/* Profile Dropdown Menu */}
                         {showProfileMenu && (
                             <div className="absolute right-0 top-12 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
                                 <div className="px-4 py-3 border-b border-gray-50 mb-1">
-                                    <p className="text-sm font-bold text-gray-900">EVANN J HALEY</p>
+                                    <p className="text-sm font-bold text-gray-900">LINDA JORDAN</p>
                                     <p className="text-xs text-gray-500 truncate">Settings & Preferences</p>
                                 </div>
                                 <button className="w-full text-left flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-red-600 transition-colors">
@@ -139,7 +141,9 @@ export default function Dashboard() {
                                 <p className="text-xs font-semibold tracking-wider text-gray-300 uppercase mb-4 truncate">
                                     Premium Checking (....4321)
                                 </p>
-                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 truncate">$254,875.00</h2>
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 truncate">
+                                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(totalBalance)}
+                                </h2>
                                 <p className="flex items-center text-sm font-medium text-emerald-400">
                                     <ArrowUpRight className="w-4 h-4 mr-1 shrink-0" />
                                     <span className="truncate">+2.4% this month</span>
@@ -228,7 +232,7 @@ export default function Dashboard() {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', position: 'relative', zIndex: 1, flexWrap: 'wrap', gap: '10px' }}>
                                 <div>
                                     <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(8px,1.6vw,10px)', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '3px' }}>Card Holder</p>
-                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, letterSpacing: '0.05em' }}>EVANN J HALEY</p>
+                                    <p style={{ color: 'white', fontSize: 'clamp(11px,2.5vw,14px)', fontWeight: 800, letterSpacing: '0.05em' }}>LINDA JORDAN</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                     <button
